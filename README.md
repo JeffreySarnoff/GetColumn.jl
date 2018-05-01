@@ -34,6 +34,7 @@ true
 julia> getcolumn(df, "ColA") == colA
 true
 
+julia> # deprecation warnings go away when TimeSeries.jl is v0.7.0- compat
 julia> getcolumn(ta, "ColB") == colB
 true
 ```
