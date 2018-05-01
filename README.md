@@ -36,7 +36,6 @@ true
 julia> getcolumn(colsABC, (2,0,1)) == colsABC[2,:,1]
 true
 
-
 julia> getcolumn(df, "ColA") == colA
 true
 julia> getcolumn(df, :ColB) == colB
