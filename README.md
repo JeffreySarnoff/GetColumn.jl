@@ -1,6 +1,6 @@
 # GetColumn.jl
 ### Get a column from a Vector, Matrix, 3D Array, DataFrame, or TimeSeries.
-#### Copyright © 2017-2018 by Jeffrey Sarnoff.  Released under the MIT License.
+#### Copyright © 2018 by Jeffrey Sarnoff.  Released under the MIT License.
 
 -----
 
