@@ -19,6 +19,7 @@ julia> colA = [4,3,2,1];
 julia> colB = [7,8,9,10];
 
 julia> colsAB = hcat(colA, colB);
+julia> colsABC = reshape(colsAB, (2,2,2))
 
 julia> df = DataFrame(ColA = colA, ColB = colB);
 
@@ -30,6 +31,13 @@ true
 
 julia> getcolumn(colsAB, 2) == colB
 true
+
+julia> getcolumn(colsABC, (1,2,0)) == colsABC[1,2,:]
+true
+
+julia> getcolumn(colsABC, (2,0,1)) == colsABC[2,:,1]
+true
+
 
 julia> getcolumn(df, "ColA") == colA
 true
