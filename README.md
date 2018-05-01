@@ -8,7 +8,7 @@
 
 
 
-_As other datatable packages become v0.7.0- compatible, more may be here._
+_As other datatable packages become v0.7.0- compatible, more will be supported._
 
 -----
 
