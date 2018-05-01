@@ -1,2 +1,2 @@
 # GetColumn.jl
-get a column from a DataFrame, TimeSeries
+Get a column from a Vector, Matrix, 3D Array, DataFrame, or TimeSeries.
