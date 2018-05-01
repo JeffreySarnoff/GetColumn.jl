@@ -28,13 +28,11 @@ julia> ta = TimeArray(dates, colsAB, ["ColA","ColB"]);
 
 julia> getcolumn(colA, 1) == colA
 true
-
 julia> getcolumn(colsAB, 2) == colB
 true
 
 julia> getcolumn(colsABC, (1,2,0)) == colsABC[1,2,:]
 true
-
 julia> getcolumn(colsABC, (2,0,1)) == colsABC[2,:,1]
 true
 
