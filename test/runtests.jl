@@ -22,6 +22,10 @@ ta = TimeArray(dates, colsAB, ["ColA","ColB"])
 @test getcolumn(colsABC, (2,0,1)) == colsABC[2,:,1]
 @test getcolumn(df, "ColA") == colA
 @test getcolumn(df, "ColB") == colB
+@test getcolumn(df, :ColA)  == colA
+@test getcolumn(df, :ColB)  == colB
 @test getcolumn(ta, "ColA") == colA
 @test getcolumn(ta, "ColB") == colB
+@test getcolumn(ta, :ColA)  == colA
+@test getcolumn(ta, :ColB)  == colB
 
