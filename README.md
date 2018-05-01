@@ -5,6 +5,8 @@
 -----
 
 [![Build Status](https://travis-ci.org/JeffreySarnoff/GetColumn.jl.svg?branch=master)](https://travis-ci.org/JeffreySarnoff/GetColumn.jl)
+
+_as other datatable packages become v0.7.0- compatible, more may be available here_
 -----
 
 ### Exports
