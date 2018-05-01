@@ -2,6 +2,9 @@ module GetColumn
 
 export getcolumn
 
+using DataFrames
+using TimeSeries
+
 getcolumn(x::AbstractVector{T}, colidx::Int) where {T} =
    colidx === 1 ? x : throw(DomainError("colidx ($colidx) > 1"))
 
