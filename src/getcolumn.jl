@@ -16,10 +16,10 @@ function getcolumn(x::AbstractArray{T,3}, colidx::Tuple{Int,Int,Int}) where {T}
    end
 end
 
-# get DataFrame column from the string form of the column id
+# get DataFrame column from the column id as string or symbol
 getcolumn(df::DataFrames.DataFrame, str::String) = getindex(df, Symbol(str))
 getcolumn(df::DataFrames.DataFrame, sym::Symbol) = df[sym]
 
-# get TimeArray column from the symbol form of the column id
+# get TimeArray column from the column id as string or symbol
 getcolumn(ta::TimeSeries.TimeArray, sym::Symbol) = getindex(ta, string(sym)).values
 getcolumn(ta::TimeSeries.TimeArray, str::String) = getindex(ta, str).values
