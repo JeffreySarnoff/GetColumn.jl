@@ -2,6 +2,7 @@
 language: julia
 os:
   - linux
+  # this takes some minutes, just test linux
 julia:
   - nightly
 notifications:
