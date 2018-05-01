@@ -13,7 +13,9 @@
 ### Examples
 
 ```julia
-julia> using DataFrames, TimeSeries, GetColumn
+julia> using DataFrames
+julia> using TimeSeries
+julia> using GetColumn
 
 julia> colA = [4,3,2,1];
 julia> colB = [7,8,9,10];
