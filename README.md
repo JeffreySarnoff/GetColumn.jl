@@ -25,15 +25,15 @@ julia> df = DataFrame(ColA = colA, ColB = colB);
 julia> dates = collect((Date(Dates.now())-Day(3)):Day(1):Date(Dates.now()));
 julia> ta = TimeArray(dates, colsAB, ["ColA","ColB"]);
 
-julia> getcolumn(colA, 1) === colA
+julia> getcolumn(colA, 1) == colA
 true
 
-julia> getcolumn(colsAB, 2) === colB
+julia> getcolumn(colsAB, 2) == colB
 true
 
-julia> getcolumn(df, "ColA") === colA
+julia> getcolumn(df, "ColA") == colA
 true
 
-julia> getcolumn(ta, "ColB") === colB
+julia> getcolumn(ta, "ColB") == colB
 true
 ```
