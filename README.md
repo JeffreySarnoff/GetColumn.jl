@@ -13,9 +13,7 @@
 ### Examples
 
 ```julia
-julia> using DataFrames
-julia> using TimeSeries
-julia> using GetColumn
+julia> using DataFrames, TimeSeries, GetColumn
 
 julia> colA = [4,3,2,1];
 julia> colB = [7,8,9,10];
@@ -29,6 +27,7 @@ julia> ta = TimeArray(dates, colsAB, ["ColA","ColB"]);
 
 julia> getcolumn(colA, 1) === colA
 true
+
 julia> getcolumn(colsAB, 2) === colB
 true
 
