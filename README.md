@@ -41,7 +41,11 @@ true
 
 julia> getcolumn(df, "ColA") == colA
 true
+julia> getcolumn(df, :ColB) == colB
+true
 
+julia> getcolumn(ta, :ColA) == colA
+true
 julia> getcolumn(ta, "ColB") == colB
 true
 ```
