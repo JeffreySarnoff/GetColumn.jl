@@ -11,16 +11,15 @@ getcolumn(x::AbstractVector{T}, colidx::Int) where {T} =
 getcolumn(x::AbstractArray{T,2}, colidx::Int) where {T} =
    1 <= colidx <= 2 ? x[:,colidx] : throw(DomainError("!(1 <= colidx ($colidx) <= 2)"))
 
-function getcolumn(x::AbstractArray{T,3}, colidx::Tuple{Int,Int}) where {T}
-   colidx = minmax(colidx[1], colidx[2])
-   if colidx === (1,2)
-      x[1,2,:]
-   elseif colidx === (1,3)
-      x[1,:,3]
-   elseif colidx === (2,3)
-      x[:,2,3]
+function getcolumn(x::AbstractArray{T,3}, colidx::Tuple{Int,Int,Int}) where {T}
+   if colidx[1] == 0
+      x[:, colidx[2], colidx[3]]
+   elseif colidx[2] == 0
+      x[colidx[1], :, colidx[3]]
+   elseif colidx[3] == 0
+      x[colidx[1], colidx[2], :]
    else
-      throw(DomainError("bad colidx ($colidx)"))
+      throw(DomainError("bad colidx ($colidx) <zero not found>"))
    end
 end
 
